@@ -3,6 +3,7 @@ import Header from '../components/layout/Header.jsx'
 import HeroHome from '../components/sections/HeroHome.jsx'
 import About from '../components/sections/About.jsx'
 import Structure from '../components/sections/Structure.jsx'
+import Footer from '../components/layout/Footer.jsx'
 
 const Home = () => {
   return (
@@ -21,6 +22,9 @@ const Home = () => {
             <Structure />
           </section>
         </main>
+        <footer>
+            <Footer />
+        </footer>
     </div>
   )
 }
