@@ -1,5 +1,8 @@
 import React from 'react'
-import Header from '../components/Header.jsx'
+import Header from '../components/layout/Header.jsx'
+import HeroHome from '../components/sections/HeroHome.jsx'
+import About from '../components/sections/About.jsx'
+import Structure from '../components/sections/Structure.jsx'
 
 const Home = () => {
   return (
@@ -7,8 +10,17 @@ const Home = () => {
         <header>
             <Header />
         </header>
-        <p>beranda</p>
-        <p>Selamat datang di halaman beranda kami!</p>
+        <main className='pt-15'>
+          <section>
+            <HeroHome />
+          </section>
+          <section>
+            <About />
+          </section>
+          <section>
+            <Structure />
+          </section>
+        </main>
     </div>
   )
 }
