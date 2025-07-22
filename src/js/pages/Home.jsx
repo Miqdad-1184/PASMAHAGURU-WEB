@@ -15,7 +15,7 @@ const Home = () => {
           <section>
             <HeroHome />
           </section>
-          <section>
+          <section id='about'>
             <About />
           </section>
           <section>
