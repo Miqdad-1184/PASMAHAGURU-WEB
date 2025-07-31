@@ -5,27 +5,27 @@ import Footer from '../components/layout/Footer.jsx';
 import CardActivity from '../components/cards/CardActivity.jsx';
 
 const Activity = () => {
-  // const [activities, setActivities] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
+  const [activities, setActivities] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // const SHEET_BEST_API_URL = import.meta.env.VITE_SHEET_ACTIVITY_URL;
+  const SHEET_BEST_API_URL = import.meta.env.VITE_SHEET_ACTIVITY_URL;
 
-  // useEffect(() => {
-  //   const fetchActivities = async () => {
-  //     try {
-  //       const response = await axios.get(SHEET_BEST_API_URL);
-  //       setActivities(response.data.reverse()); 
-  //     } catch (err) {
-  //       console.error("Gagal mengambil aktivitas:", err);
-  //       setError(err);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchActivities = async () => {
+      try {
+        const response = await axios.get(SHEET_BEST_API_URL);
+        setActivities(response.data.reverse()); 
+      } catch (err) {
+        console.error("Gagal mengambil aktivitas:", err);
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  //   fetchActivities();
-  // }, []);
+    fetchActivities();
+  }, []);
   return (
     <div>
       <header>
@@ -38,7 +38,7 @@ const Activity = () => {
         </section>
         
         <section className='flex flex-row flex-wrap items-center justify-center gap-5 pt-20'>
-          {/* {loading && <p>Memuat aktivitas...</p>}
+          {loading && <p>Memuat aktivitas...</p>}
           {error && <p>Terjadi kesalahan saat memuat aktivitas: {error.message || 'Periksa koneksi atau URL API.'}</p>} 
           
           {activities.length > 0 ? (
@@ -53,13 +53,7 @@ const Activity = () => {
             ))
           ) : (
             !loading && !error && <p>Tidak ada aktivitas yang ditemukan.</p>
-          )} */}
-          <CardActivity/>
-          <CardActivity/>
-          <CardActivity/>
-          <CardActivity/>
-          <CardActivity/>
-          <CardActivity/>
+          )}
         </section>
       </main>
       <footer>
